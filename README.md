@@ -7,7 +7,7 @@
 
 Portable **JSON Schema** (and CSV column map) for verified clinical shadowing / observation hours.
 
-Part of the [Cross Clinical OSS suite](https://github.com/Cross-Clinical/awesome).
+Part of the [Cross Clinical OSS suite](https://github.com/Cross-Clinical/suite-index).
 
 > See [DISCLAIMER.md](DISCLAIMER.md). Educational / operational hours ledger format — **no PHI**.
 

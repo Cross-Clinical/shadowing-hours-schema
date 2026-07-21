@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "student": {
+    "name": "Sam Chen",
+    "school": "City College Nursing"
+  },
+  "host": {
+    "name": "Priya Patel, RN",
+    "credential_tier": "licensed"
+  },
+  "site": {
+    "name": "HopeCore Clinic"
+  },
+  "specialty": "Primary Care Nursing",
+  "started_at": "2026-07-01T09:00:00-05:00",
+  "ended_at": "2026-07-01T12:30:00-05:00",
+  "hours": 3.5,
+  "mode": "in_person",
+  "verification": {
+    "status": "pending"
+  }
+}

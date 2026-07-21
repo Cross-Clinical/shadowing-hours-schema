@@ -1,0 +1,39 @@
+{
+  "name": "@cross-clinical/shadowing-hours-schema",
+  "version": "0.1.0",
+  "description": "JSON Schema, CSV map, and fixtures for verified clinical shadowing hours",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./schema/shadowing-hour-record.schema.json": "./schema/shadowing-hour-record.schema.json"
+  },
+  "files": [
+    "schema",
+    "fixtures",
+    "CSV_COLUMN_MAP.md",
+    "index.js",
+    "DISCLAIMER.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/validate.test.js",
+    "validate": "node scripts/validate-fixtures.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cross-Clinical/shadowing-hours-schema.git"
+  },
+  "keywords": [
+    "shadowing",
+    "clinical-hours",
+    "json-schema",
+    "healthcare-education",
+    "cross-clinical"
+  ]
+}

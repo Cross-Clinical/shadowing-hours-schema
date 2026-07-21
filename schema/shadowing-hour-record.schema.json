@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Cross-Clinical/shadowing-hours-schema/main/schema/shadowing-hour-record.schema.json",
+  "title": "ShadowingHourRecord",
+  "description": "Portable record of verified clinical shadowing / observation hours. No PHI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "student",
+    "host",
+    "site",
+    "specialty",
+    "started_at",
+    "ended_at",
+    "hours",
+    "mode",
+    "verification"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "student": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "format": "email" },
+        "school": { "type": "string" }
+      }
+    },
+    "host": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "credential_tier"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "credential_tier": {
+          "type": "string",
+          "enum": ["student", "trainee", "licensed", "org_admin", "other"]
+        }
+      }
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "location": { "type": "string" }
+      }
+    },
+    "specialty": { "type": "string", "minLength": 1 },
+    "started_at": { "type": "string", "format": "date-time" },
+    "ended_at": { "type": "string", "format": "date-time" },
+    "hours": { "type": "number", "exclusiveMinimum": 0, "maximum": 24 },
+    "mode": { "type": "string", "enum": ["in_person", "virtual"] },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pending", "verified", "rejected"]
+        },
+        "verified_at": { "type": "string", "format": "date-time" },
+        "verifier_name": { "type": "string" }
+      }
+    }
+  }
+}

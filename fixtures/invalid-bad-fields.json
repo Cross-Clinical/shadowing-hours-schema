@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1.0",
+  "student": { "name": "Bad Record" },
+  "host": { "name": "Host", "credential_tier": "licensed" },
+  "site": { "name": "Site" },
+  "specialty": "Cardiology",
+  "started_at": "not-a-date",
+  "ended_at": "2026-07-01T12:00:00Z",
+  "hours": -1,
+  "mode": "telepathy",
+  "verification": { "status": "maybe" }
+}
